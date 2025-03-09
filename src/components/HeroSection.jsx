@@ -13,7 +13,7 @@ const heroImages = [
 
 const HeroSection = () => {
   return (
-    <div className="relative flex justify-center items-center w-full py-4">
+    <div className="relative flex justify-center items-center w-full py-4 z-10 mt-16"> {/* Add mt-16 to account for Navbar height */}
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={20}

@@ -7,12 +7,12 @@ const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <nav className="bg-[#c7ae6a] text-white p-4 flex items-center justify-between shadow-md">
+    <nav className="bg-[#c7ae6a] text-white p-4 flex items-center justify-between shadow-md z-50"> {/* Add z-50 to the Navbar */}
       {/* Left - Menu */}
       <div className="relative">
         <FiMenu className="text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} />
         {menuOpen && (
-          <div className="absolute left-0 top-full bg-[#d5c28f] p-4 shadow-lg rounded-md w-56">
+          <div className="absolute left-0 top-full bg-[#d5c28f] p-4 shadow-lg rounded-md w-56 z-50"> {/* Add z-50 */}
             <ul className="space-y-2">
               <li><Link to="/" className="block">Find a Home</Link></li>
               <li><Link to="/buying" className="block">Buying with ToDo Realty</Link></li>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search..."
-            className="absolute right-0 top-full mt-2 p-2 border rounded-md w-48 text-black"
+            className="absolute right-0 top-full mt-2 p-2 border rounded-md w-48 text-black z-50" // Add z-50
           />
         )}
       </div>
