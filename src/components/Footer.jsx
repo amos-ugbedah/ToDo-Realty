@@ -1,4 +1,5 @@
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Footer = () => {
   return (
@@ -26,23 +27,32 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Right - Social Media Links */}
-        <div className="flex space-x-4">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
-            <FaFacebookF />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
-            <FaTwitter />
-          </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
-            <FaInstagram />
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
-            <FaLinkedin />
-          </a>
-          <a href="https://wa.me/234555555555" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
-            <FaWhatsapp />
-          </a>
+        {/* Right - Customer Support & Social Media Links */}
+        <div className="flex flex-col items-center md:items-end space-y-4">
+          {/* Customer Support Link */}
+          <Link to="/customer-support" className="flex items-center gap-2">
+            <img src="/images/cus.jpeg" alt="Support" className="w-6 h-6 object-cover" />
+            <span>Customer Support</span>
+          </Link>
+
+          {/* Social Media Links */}
+          <div className="flex space-x-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
+              <FaFacebookF />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
+              <FaTwitter />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
+              <FaInstagram />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
+              <FaLinkedin />
+            </a>
+            <a href="https://wa.me/234555555555" target="_blank" rel="noopener noreferrer" className="text-[#c7ae6a] text-2xl hover:text-[#d5c28f]">
+              <FaWhatsapp />
+            </a>
+          </div>
         </div>
 
       </div>

@@ -1,5 +1,7 @@
+// src/components/HeroSection.jsx
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -12,8 +14,10 @@ const heroImages = [
 ];
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="relative flex justify-center items-center w-full py-4 z-10 mt-16"> {/* Add mt-16 to account for Navbar height */}
+    <div className="relative flex justify-center items-center w-full py-4 z-10 mt-16">
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={20}
@@ -33,7 +37,10 @@ const HeroSection = () => {
             />
             <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-4">
               <h2 className="text-xl md:text-2xl font-bold">{item.caption}</h2>
-              <button className="mt-4 px-6 py-3 bg-[#b99a45] text-white font-semibold rounded-lg hover:bg-[#c7ae6a] transition">
+              <button
+                className="mt-4 px-6 py-3 bg-[#b99a45] text-white font-semibold rounded-lg hover:bg-[#c7ae6a] transition"
+                onClick={() => navigate("/houses")}
+              >
                 Discover More
               </button>
             </div>

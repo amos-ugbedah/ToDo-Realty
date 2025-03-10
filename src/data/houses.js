@@ -243,3 +243,5 @@ export const houses = [
     images: ["/images/fam.jpeg", "/images/fam1.webp"],
   },
 ];
+
+export default houses;
