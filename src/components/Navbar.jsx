@@ -36,21 +36,14 @@ const Navbar = () => {
             <ul className="space-y-2">
               <li><Link to="/find-a-home" className="block">Find a Home</Link></li>
               <li><Link to="/buying" className="block">Buying with ToDo Realty</Link></li>
-              <li><Link to="/schemes" className="block">Schemes & Offers</Link></li>
+              <li><Link to="/schemes-offers" className="block">Schemes & Offers</Link></li>
               <li><Link to="/process" className="block">The Buying Process</Link></li>
               <li><Link to="/advice" className="block">Advice & Inspiration</Link></li>
               <li className="flex items-center gap-2">
                 <img src="/images/owner.jpg" alt="Profile" className="w-6 h-6 rounded-full" />
                 <Link to="/owners-hub" className="block">Owners Hub</Link>
               </li>
-
-              {/* Customer Support Link with Image */}
-              <li className="border-t pt-3 mt-3">
-                <Link to="/customer-support" className="flex items-center gap-2">
-                  <img src="/images/cus.jpeg" alt="Support" className="w-6 h-6 object-cover" />
-                  <span>Customer Support</span>
-                </Link>
-              </li>
+              <li><Link to="/customer-support" className="block">Customer Support</Link></li>
             </ul>
           </div>
         )}

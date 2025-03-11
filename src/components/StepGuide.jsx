@@ -7,7 +7,7 @@ const steps = [
     icon: <FaHome />, 
     title: "Find Your Home", 
     desc: "Browse listings and select the best options.",
-    link: "/available-homes" // Link to available properties
+    link: "/houses" // Ensure this matches the route in App.js
   },
   { 
     icon: <FaHandshake />, 
@@ -35,16 +35,15 @@ const StepGuide = () => {
         {steps.map((step, index) => (
           <div key={index} className="bg-white p-6 rounded-lg shadow-md w-72 text-center">
             <div className="text-4xl mb-4 text-[#b99a45]">{step.icon}</div>
-            <h3 className="text-xl font-bold">{step.title}</h3>
-            <p className="text-gray-600">{step.desc}</p>
-            {step.link && (
-              <Link 
-                to={step.link} 
-                className="mt-3 inline-block text-[#b99a45] underline font-semibold"
-              >
-                Learn More
+            {/* Make the title a clickable link */}
+            {step.link ? (
+              <Link to={step.link} className="text-xl font-bold text-[#b99a45] hover:underline">
+                {step.title}
               </Link>
+            ) : (
+              <h3 className="text-xl font-bold">{step.title}</h3>
             )}
+            <p className="text-gray-600">{step.desc}</p>
           </div>
         ))}
       </div>
